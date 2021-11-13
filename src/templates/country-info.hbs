@@ -1,0 +1,10 @@
+{{#each this}}
+<li class='country-desc_list'>
+    <img src="{{flags.svg}}" alt="" width="30"><span class='country-name'> {{name.official}}</span>
+</li>
+<li class='country-desc_list'>Capital: <span class='country-params_list'>{{capital}}</span></li>
+<li class='country-desc_list'>Population: <span class='country-params_list'>{{population}}</span></li>
+<li class='country-desc_list'>Languages:<span class='country-params_list'>{{#each languages}}{{#if @last}} <span
+            class='country-params_list'>{{this}}</span> {{else}} <span class='country-params_list'>{{this}},</span>
+        {{/if}}</span>{{/each}}</li>
+{{/each}}
